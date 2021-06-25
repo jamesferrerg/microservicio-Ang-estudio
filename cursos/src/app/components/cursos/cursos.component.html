@@ -10,6 +10,7 @@
                 <tr>
                     <th>Id</th>
                     <th>Nombre</th>
+                    <th>Alumnos</th>
                     <th>Fecha</th>
                     <th>Editar</th>
                     <th>Eliminar</th>
@@ -19,6 +20,11 @@
                 <tr *ngFor="let curso of lista">
                     <td>{{ curso.id }}</td>
                     <td>{{ curso.nombre }}</td>
+                    <td><button class="btn btn-info btn-sm"
+                        [routerLink]="['/cursos/asignar-alumnos', curso.id]">
+                        Añadir ({{ curso.alumnos.length }})
+                        </button>
+                    </td>
                     <td>{{ curso.createAt | date: 'yyyy/MM/dd' }}</td>
                     <!-- Se usa corchetes porque debe pasarse una variable --> 
                     <td>
