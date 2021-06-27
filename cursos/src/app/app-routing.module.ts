@@ -7,6 +7,7 @@ import { ExamenesComponent } from './components/examenes/examenes.component';
 import { CursoFormComponent } from './components/cursos/curso-form.component';
 import { ExamenFormComponent } from './components/examenes/examen-form.component';
 import { AsignarAlumnosComponent } from './components/cursos/asignar-alumnos.component';
+import { AsignarExamenesComponent } from './components/cursos/asignar-examenes.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'cursos'},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'examenes/form', component: ExamenFormComponent},
   {path: 'examenes/form/:id', component: ExamenFormComponent},
   {path: 'cursos/asignar-alumnos/:id', component: AsignarAlumnosComponent},
+  {path: 'cursos/asignar-examenes/:id', component: AsignarExamenesComponent}
 ];
 
 @NgModule({
